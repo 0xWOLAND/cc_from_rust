@@ -1,4 +1,7 @@
 #include "calculator.h"
+#include <stdexcept>
+
+extern "C" {
 
 int add(int a, int b) {
     return a + b;
@@ -14,7 +17,9 @@ int multiply(int a, int b) {
 
 double divide(int a, int b) {
     if (b == 0) {
-        return 0.0; // Handle divide by zero case
+        throw std::runtime_error("Division by zero");
     }
     return static_cast<double>(a) / b;
+}
+
 }
