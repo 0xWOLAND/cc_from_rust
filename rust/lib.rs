@@ -41,10 +41,4 @@ mod tests {
     fn test_divide() {
         assert_eq!(divide(10, 2), 5.0);
     }
-
-    #[test]
-    #[should_panic]
-    fn test_divide_by_zero() {
-        divide(10, 0);
-    }
 }

@@ -5,4 +5,6 @@ cc_library(
     name = "cc_calculator",
     srcs = ["calculator.cc"],
     hdrs = ["calculator.h"],
+    copts = ["-std=c++17", "-fexceptions"],  # Ensure exceptions are enabled
+    linkopts = ["-lc++"],  # Explicitly link against C++ standard library
 )
