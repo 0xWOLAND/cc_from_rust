@@ -1,9 +1,10 @@
 [package]
-name = "rust_calculator"
+name = "calculator-rs"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-libc = "0.2.159" # Ensure this version matches Bazel
+cxx = "1.0"
 
 [build-dependencies]
+cxx-build = "1.0"
